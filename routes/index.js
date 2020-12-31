@@ -3,6 +3,14 @@ const { sendEmail } = require("../controller/send.email");
 const { Router } = express;
 const postRouter = Router();
 
+postRouter.get("/post", async (req, res) => {
+  try {
+    res.json({ msg: "Email" });
+  } catch (error) {
+    console.log(`Error from post: ${error}`);
+  }
+});
+
 postRouter.post("/post", async (req, res) => {
   try {
     const { userfullname, useremail, message } = req.body.val;
