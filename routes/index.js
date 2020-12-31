@@ -3,7 +3,7 @@ const { sendEmail } = require("../controller/send.email");
 const { Router } = express;
 const postRouter = Router();
 
-postRouter.get("/post", async (req, res) => {
+postRouter.get("/", async (req, res) => {
   try {
     res.json({ msg: "Email" });
   } catch (error) {
