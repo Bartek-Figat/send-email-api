@@ -11,7 +11,7 @@ postRouter.get("/", async (req, res) => {
   }
 });
 
-postRouter.post("/post", async (req, res) => {
+postRouter.post("/", async (req, res) => {
   try {
     const { userfullname, useremail, message } = req.body.val;
 
