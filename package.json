@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "server:watch": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "Bartlomiej Figatowski",
   "license": "ISC",
@@ -15,8 +15,5 @@
     "express": "^4.17.1",
     "helmet": "^4.3.1"
   },
-  "devDependencies": {
-    "morgan": "^1.10.0",
-    "nodemon": "^2.0.6"
-  }
+  "devDependencies": {}
 }

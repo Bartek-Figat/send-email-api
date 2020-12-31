@@ -7,9 +7,6 @@ sgMail.setApiKey(sendgrid_api_key);
 const sendEmail = async (user) => {
   try {
     const { userfullname, useremail, message } = user;
-    console.log(userfullname);
-    console.log(useremail);
-    console.log(message);
     const msg = {
       to: `figat29@gmail.com`,
       from: `${useremail}`,
