@@ -1,5 +1,7 @@
 const express = require("express");
+const { validationResult } = require("express-validator");
 const { sendEmail } = require("../controller/send.email");
+const { contactFormValidation } = require("../middleware/validation");
 const { Router } = express;
 const postRouter = Router();
 
@@ -21,9 +23,9 @@ postRouter.post("/", async (req, res) => {
       message,
     };
     await sendEmail(user);
-    res.json({ msg: "ok" });
+    res.json({ msg: await sendEmail(user) });
   } catch (error) {
-    console.log(`Error from post: ${error}`);
+    res.status(500).json({ error: "Something went wrong" });
   }
 });
 
